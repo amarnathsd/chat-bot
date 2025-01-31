@@ -80,6 +80,7 @@ const Login = () => {
           alt="Flying Panda Logo"
           width={144}
           height={50}
+          className="h-[110px] w-auto md:mt-10"
         />
       </div>
       <div className="flex flex-col md:flex-row items-end justify-center pb-16">

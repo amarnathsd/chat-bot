@@ -65,7 +65,7 @@ const Signup = () => {
           alt="Flying Panda Logo"
           width={144}
           height={36}
-          className=""
+          className="h-[110px] w-auto md:mt-10"
         />
       </div>
       <div className="flex items-end justify-center ">
