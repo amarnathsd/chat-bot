@@ -12,11 +12,11 @@ const HeroSection = () => {
           alt="Illustration"
           width={900}
           height={300}
-          className="w-full md:h-screen"
+          className="w-full h-screen"
         />
       </div>
-      <div className="absolute z-20 top-[30%] left-[5%]  w-3/12 leading-none text-7xl font-extrabold  text-secondary">
-        <AnimatedParagraph content={"Welcome Abrod"} />
+      <div className="md:flex justify-center absolute z-20 top-1/2 md:top-[30%] left-1/3 md:left-[5%] text-center  md:w-3/12 leading-none text-3xl md:text-7xl font-extrabold  text-secondary">
+        <AnimatedParagraph content={"Make AI your brand manager"} />
       </div>
     </div>
   );

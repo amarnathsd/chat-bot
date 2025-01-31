@@ -18,35 +18,42 @@ const PortfolioSection = () => {
   const items = [
     {
       id: 1,
-      name: "Culinary Excellence",
+      name: "Intelligent Analytics",
       description:
-        "Experience the finest culinary creations crafted by our expert chefs.",
+        "Utilize intelligent analytics to evaluate user engagement levels, identifying warmth and potential conversion opportunities through chat interactions",
       icon: "/images/Banner2.jpg",
     },
     {
       id: 2,
-      name: "Innovative Dishes",
+      name: "Team collaboration",
       description:
-        "Discover unique and innovative dishes that redefine modern cuisine.",
+        "Enable team collaboration with customizable dashboard access levels, allowing individuals to engage as admin, editor, or viewer.",
       icon: "/images/Banner2.jpg",
     },
     {
       id: 3,
-      name: "Gourmet Experience",
+      name: "Explainable AI modelling",
       description:
-        "Indulge in a gourmet experience with our carefully curated menu.",
+        "Customize your chatbot's tone with Explainable AI, adjusting how it engages with users to match your desired tone.",
       icon: "/images/Banner2.jpg",
     },
     {
       id: 4,
-      name: "Art of Cooking",
+      name: "Prioritized engineering support",
       description:
-        "Witness the art of cooking with our masterfully prepared dishes.",
+        "Receive prioritized engineering support, ensuring timely assistance and resolution of technical issues to keep your operations running smoothly.",
+      icon: "/images/Banner2.jpg",
+    },
+    {
+      id: 5,
+      name: "Personalized onboarding experience",
+      description:
+        "Experience onboarding made just for you, tailored to your needs and preferences for a personalized journey.",
       icon: "/images/Banner2.jpg",
     },
   ];
 
-  const totalSlides = items.length - 3;
+  const totalSlides = items.slice(1, 4).length;
 
   // Touch handlers for mobile carousel
   const handleTouchStart = (e) => {
@@ -115,18 +122,18 @@ const PortfolioSection = () => {
             <Image
               src="/images/round2.webp"
               alt="Culinary Dish"
-              className="object-cover w-[9rem] md:w-[15rem] xl:w-[20rem]"
+              className="object-cover w-[9rem] md:w-[15rem] xl:w-[16em]"
               width={270}
               height={270}
             />
           </div>
 
           {/* Overlay Image */}
-          <div className="absolute top-[42vh] right-[40vw] md:right-[45vw] md:top-[32vh] overflow-hidden rounded-full">
+          <div className="absolute top-[42vh] right-[40vw] md:right-[42vw] md:top-[32vh] overflow-hidden rounded-full">
             <Image
               src="/images/round.png"
               alt="Culinary Innovation"
-              className="object-cover w-[12rem] md:w-[23rem] xl:w-[23rem] rounded-full"
+              className="object-cover w-[12rem] md:w-[23rem] xl:w-[21rem] rounded-full"
               width={270}
               height={270}
             />
@@ -134,17 +141,17 @@ const PortfolioSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col h-[40vh] w-full md:w-4/12 justify-between text-left">
+        <div className="flex flex-col md:h-[40vh] w-full md:w-4/12 md:justify-between md:items-center text-left">
           <h2 className="text-4xl text-[#CC9F53] leading-relaxed font-bold mb-6">
-            <AnimatedParagraph content={items[3].name} />
+            <AnimatedParagraph content={items[4].name} />
           </h2>
           <div className="flex">
             {/* <div className="px-6 md:px-0 md:ps-10 md:pe-4">
               <YellowForkIcon />
             </div> */}
-            <div className="flex items-center justify-start md:justify-end">
-              <p className="description-style pt-6 md:pt-20 pe-6">
-                <AnimatedParagraph content={items[3].description} />
+            <div className="flex items-start justify-start md:justify-end">
+              <p className="description-style md:pt-6 md:pt-20 pe-6">
+                <AnimatedParagraph content={items[4].description} />
               </p>
             </div>
           </div>
@@ -157,9 +164,9 @@ const PortfolioSection = () => {
           <h2 className="Heading-style w-7/12">
             <AnimatedParagraph content="Our Culinary Portfolio" />
           </h2>
-          <p className="w-3/12 description-style">
+          <div className="w-3/12 description-style md:pb-10 flex items-center">
             <AnimatedParagraph content="Explore our diverse range of culinary offerings." />
-          </p>
+          </div>
         </div>
 
         {/* Cards */}
@@ -168,7 +175,9 @@ const PortfolioSection = () => {
             <motion.div
               key={item.id}
               className={`${
-                hoveredIndex === index ? "lg:w-[50rem] xl:w-[70rem]" : "w-2/12 xl:w-2/12"
+                hoveredIndex === index
+                  ? "lg:w-[50rem] xl:w-[70rem]"
+                  : "w-2/12 xl:w-2/12"
               } relative flex rounded-3xl overflow-hidden bg-secondary transition-all duration-1000`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(index)}
@@ -315,7 +324,7 @@ const PortfolioSection = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-[13rem] bg-secondary h-4/6 w-full"></div>
+        <div className="absolute top-[13rem] bg-primary h-4/6 w-full"></div>
       </div>
     </div>
   );
