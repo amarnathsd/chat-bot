@@ -53,6 +53,10 @@ const Login = () => {
     }
   };
 
+  const NavigateTo = () => {
+    router.push("/signin");
+  };
+
   // const checkPaidUser = async (userEmail) => {
   //   const paidUserCollection = collection(db, "paidUser");
   //   const q = query(paidUserCollection, where("email", "==", userEmail));
@@ -78,7 +82,7 @@ const Login = () => {
           height={50}
         />
       </div>
-      <div className="flex flex-col md:flex-row items-end justify-center pb-28">
+      <div className="flex flex-col md:flex-row items-end justify-center pb-16">
         <div className="flex flex-col md:flex-row  w-full max-w-[85%] mx-auto items-center">
           {/* Left Section */}
           <div className="md:w-1/2 md:px-8">
@@ -142,6 +146,14 @@ const Login = () => {
                 />{" "}
                 Sign in with Google
               </button>
+              <div className="w-full md:w-10/12 ">
+                <div
+                  onClick={NavigateTo}
+                  className="flex justify-center pt-3 pb-1 text-sm underline text-blue-700 cursor-pointer"
+                >
+                  Don't have account Please Sign up
+                </div>
+              </div>
             </form>
           </div>
 

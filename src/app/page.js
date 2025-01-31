@@ -1,9 +1,9 @@
 import React from 'react';
-import Login from '@/pages/Login';
+import Landing from '@/pages/Landing';
 
 const page = () => {
   return (
-    <div><Login/></div>
+    <div><Landing/></div>
   )
 }
 

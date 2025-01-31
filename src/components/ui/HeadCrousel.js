@@ -5,11 +5,11 @@ import Image from "next/image";
 const HeadCrousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [
-    "Flat 10% off for 1st Appointment Booking! Code: FLYPANDA",
-    "Special Discount for New Users. Code: NEWFLY",
-    "Refer a Friend and Earn Rewards!",
-    "Book Now and Get Free Consultation!",
-    "Flat ₹500 Off on Family Packages!",
+    "A truly customizable Chatbot with premium features",
+    "Automate conversations with the power of AI",
+    "Communicate Real-Time with Customers",
+    "Empower Users with Easy Knowledge Base Creation",
+    "Equip Customers with Relevant Info for Self-Service Using Our Knowledge Base",
   ];
 
   useEffect(() => {
