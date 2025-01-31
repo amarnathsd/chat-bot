@@ -98,9 +98,9 @@ const PackageCards = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center p-4">
+    <div className="flex flex-col justify-center items-center p-4 md:max-h-screen">
       <div>
-        <div className="Heading-style pb-5"><AnimatedParagraph content="We have multiple plans for your growth"/></div>
+        <div className="Heading-style "><AnimatedParagraph content="We have multiple plans for your growth"/></div>
         <div className="text-primary text-3xl pb-8 text-center flex justify-center"><AnimatedParagraph content="Flexible plans that adapt to your needs"/></div>
       </div>
       <div
@@ -116,7 +116,7 @@ const PackageCards = () => {
             )}
             <div className="relative py-[5px] w-full md:w-[310px] hover:before:border-transparent hover:before:absolute hover:before:inset-0 hover:before:rounded-2xl hover:before:bg-gradient-to-b hover:before:from-primary hover:before:to-primary/60">
               <div
-                className={`max-w-full sm:max-w-[300px] h-[580px] mx-auto rounded-lg shadow-lg text-center bg-white flex flex-col justify-between overflow-visible relative rounded-xl ${
+                className={`max-w-full sm:max-w-[300px] h-[75vh] mx-auto rounded-lg shadow-lg text-center bg-white flex flex-col justify-between overflow-visible relative rounded-xl ${
                   pkg.id === 2
                     ? "bg-gradient-to-b from-white to-primary/75"
                     : "bg-gradient-to-b from-[#F7ECFD] to-primary/35"
@@ -131,7 +131,7 @@ const PackageCards = () => {
                     {pkg.benefits.map((benefit, i) => (
                       <li
                         key={i}
-                        className="flex items-start justify-start pt-5"
+                        className="flex items-start justify-start pt-3"
                       >
                         <Image
                           width={16}
@@ -158,16 +158,15 @@ const PackageCards = () => {
                             marginRight: "8px",
                           }}
                         >
-                          {/* ₹599 */}
                         </span>
-                        ₹{pkg.price}{" "}
+                        ${pkg.price}{" "}
                         <span className="text-base font-normal"></span>
                         <span className="text-base font-normal">/month</span>
                       </>
                     )}
                     {pkg.id !== 1 && (
                       <>
-                        ₹{pkg.price}
+                      ${pkg.price}
                         <span className="text-base font-normal"></span>
                         <span className="text-base font-normal">/month</span>
                       </>
@@ -183,12 +182,6 @@ const PackageCards = () => {
             </div>
           </div>
         ))}
-        {/* <CustomSnackbar
-          open={snackbarOpen}
-          onClose={handleCloseSnackbar}
-          message={snackbarMessage}
-          severity={snackbarSeverity}
-        /> */}
       </div>
     </div>
   );

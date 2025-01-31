@@ -5,11 +5,26 @@ import Image from "next/image";
 const HeadCrousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [
-    "A truly customizable Chatbot with premium features",
-    "Automate conversations with the power of AI",
-    "Communicate Real-Time with Customers",
-    "Empower Users with Easy Knowledge Base Creation",
-    "Equip Customers with Relevant Info for Self-Service Using Our Knowledge Base",
+    {
+      image: "/images/login1.png",
+      text: "A truly customizable Chatbot with premium features",
+    },
+    {
+      image: "/images/login2.png",
+      text: "Automate conversations with the power of AI",
+    },
+    {
+      image: "/images/login3.png",
+      text: "Communicate Real-Time with Customers",
+    },
+    {
+      image: "/images/login4.png",
+      text: "Empower Users with Easy Knowledge Base Creation",
+    },
+    {
+      image: "/images/login5.png",
+      text: "Equip Customers with Relevant Info for Self-Service Using Our Knowledge Base",
+    },
   ];
 
   useEffect(() => {
@@ -24,16 +39,16 @@ const HeadCrousel = () => {
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeSlide * 100}%)` }}
       >
-        {slides.map((text, index) => (
+        {slides.map((slide, index) => (
           <div key={index} className="flex flex-col items-center min-w-full">
             <Image
-              src="/images/Google-logo.webp"
+              src={slide.image}
               alt="Illustration"
               width={300}
               height={300}
             />
             <p className="text-lg font-bold text-center text-primary mt-3 w-[70%]">
-              {text}
+              {slide.text}
             </p>
           </div>
         ))}
