@@ -1,24 +1,12 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { auth } from "@/firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import Integration from "@/pages/Landing"; // Make sure the correct path to Integration page is used
+import React from "react";
+import Landing from "@/pages/Landing";
 
-const IntegrationPage = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-    return () => unsubscribe();
-  }, []);
-
+const page = () => {
   return (
     <div>
-      {user ? <Integration /> : <p>Please log in to access this page.</p>}
+      <Landing />
     </div>
   );
 };
 
-export default IntegrationPage;
+export default page;

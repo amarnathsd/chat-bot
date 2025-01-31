@@ -13,7 +13,6 @@ import { db, auth } from "@/firebase";
 import Image from "next/image";
 import HeadCrousel from "@/components/ui/HeadCrousel";
 import { useDispatch } from "react-redux";
-import { setUserSignedUp, setShowPopup } from "@/store/userSlice"; // Adjust the import path
 import { sendEmailVerification } from "firebase/auth";
 
 const Signup = () => {
@@ -50,20 +49,23 @@ const Signup = () => {
       await signInWithPopup(auth, new GoogleAuthProvider());
       alert("You have successfully logged in.");
       router.push("/login");
-      dispatch(setUserSignedUp(true));
     } catch (error) {
       alert(error.message || "Google login failed. Please try again.");
     }
   };
+  const NavigateTo = () => {
+    router.push("/login");
+  };
 
   return (
     <div className="md:h-screen flex flex-col justify-start  bg-gradient-to-b from-white to-primary/35">
-      <div className=" md:ps-8">
+      <div className=" md:ps-8 md:max-h-[15%]">
         <Image
           src="/images/logo.png"
           alt="Flying Panda Logo"
           width={144}
           height={36}
+          className=""
         />
       </div>
       <div className="flex items-end justify-center ">
@@ -154,6 +156,14 @@ const Signup = () => {
                 />
                 Sign in with Google
               </button>
+              <div className="w-full md:w-10/12 ">
+                <div
+                  onClick={NavigateTo}
+                  className="flex justify-center pt-3 pb-1 text-sm underline text-blue-700 cursor-pointer"
+                >
+                  have a account Please Login
+                </div>
+              </div>
             </form>
           </div>
 
