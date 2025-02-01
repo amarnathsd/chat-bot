@@ -101,11 +101,11 @@ const PortfolioSection = () => {
       {/* Desktop View */}
       <div className="relative flex flex-col md:flex-row justify-between items-center px-5 md:px-16 pt-8 md:h-screen">
         {/* Left Section */}
-        <div className="flex flex-col md:justify-between md:w-6/12 w-full h-[75vh] xl:h-[55vh] text-left">
+        <div className="flex flex-col md:justify-between md:w-6/12 w-full h-[75vh] xl:h-[65vh] text-left">
           <h1 className="Heading-style mb-6">
             <AnimatedParagraph content={items[0].name} />
           </h1>
-          <p className="description-style w-full md:w-6/12 md:pb-24">
+          <p className="description-style w-full md:w-6/12 ">
             <AnimatedParagraph content={items[0].description} />
           </p>
         </div>
@@ -141,7 +141,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col md:h-[40vh] w-full md:w-4/12 md:justify-between md:items-center text-left">
+        <div className="flex flex-col md:h-[50vh] w-full md:w-4/12 md:justify-between md:items-center text-left">
           <h2 className="text-4xl text-[#CC9F53] leading-relaxed font-bold mb-6">
             <AnimatedParagraph content={items[4].name} />
           </h2>
@@ -160,12 +160,12 @@ const PortfolioSection = () => {
 
       {/* Desktop Cards Section */}
       <div className="hidden md:block px-16 bg-white h-screen flex flex-col justify-between">
-        <div className="flex items-end pb-16">
+        <div className="flex items-end">
           <h2 className="Heading-style w-7/12">
-            <AnimatedParagraph content="Our Culinary Portfolio" />
+            <AnimatedParagraph content="A truly customizable Chatbot" />
           </h2>
           <div className="w-3/12 description-style md:pb-10 flex items-center">
-            <AnimatedParagraph content="Explore our diverse range of culinary offerings." />
+            <AnimatedParagraph content="Utilize Our Live Chat Feature for Instant, Real-Time Communication with Customers" />
           </div>
         </div>
 

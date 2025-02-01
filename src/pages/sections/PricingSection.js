@@ -44,15 +44,10 @@ const packages = [
   },
   {
     id: 4,
-    name: "VIP Package",
+    name: "Enterprise",
     price: 1499,
     benefits: [
-      "All Platinum Package Features",
-      "View up to 50 profiles",
-      "Compatibility report - (horoscope matching)",
-      "24x7 Availability of Matchmaking Expert and personal concierge",
-      "Wedding-related discounts and vouchers",
-      "Exclusive access to all events and seminars",
+      "Need-based Pricing",
     ],
     planId: "VIP",
   },
@@ -150,7 +145,7 @@ const PackageCards = () => {
                 <div>
                   <div className="border-b border-black mb-6"></div>
                   <div className="text-3xl md:text-4xl text-black font-extrabold pb-6">
-                    {pkg.id === 1 && (
+                    {pkg.id === 4 && (
                       <>
                         <span
                           style={{
@@ -159,12 +154,9 @@ const PackageCards = () => {
                           }}
                         >
                         </span>
-                        ${pkg.price}{" "}
-                        <span className="text-base font-normal"></span>
-                        <span className="text-base font-normal">/month</span>
                       </>
                     )}
-                    {pkg.id !== 1 && (
+                    {pkg.id !== 4 && (
                       <>
                       ${pkg.price}
                         <span className="text-base font-normal"></span>
@@ -175,7 +167,7 @@ const PackageCards = () => {
                   <button
                     className="w-10/12 px-5 rounded-lg py-3 normal-case font-base bg-primary mb-3 text-white"
                   >
-                    Select Package
+                    {pkg.id === 4 ? "Conatct us":"Select Plan"}
                   </button>
                 </div>
               </div>

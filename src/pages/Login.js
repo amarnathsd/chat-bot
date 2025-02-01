@@ -91,7 +91,7 @@ const Login = () => {
               Welcome Back!
             </h1>
             <p className="text-base text-center md:pe-32 font-medium text-primary mb-6">
-              The faster you fill up, the faster you get a slot
+              The faster you fill up, the faster you get a bot
             </p>
 
             {/* Form */}
@@ -145,7 +145,7 @@ const Login = () => {
                   height={36}
                   className="object-cover"
                 />{" "}
-                Sign in with Google
+                Login with Google
               </button>
               <div className="w-full md:w-10/12 ">
                 <div

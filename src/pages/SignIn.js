@@ -76,7 +76,7 @@ const Signup = () => {
               Join Us Today!
             </h1>
             <p className="text-base text-center md:pe-32 font-medium text-primary mb-6">
-              The faster you fill up, the faster you get a slot
+              The faster you fill up, the faster you get a bot
             </p>
 
             {/* Form */}
