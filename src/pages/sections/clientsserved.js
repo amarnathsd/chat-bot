@@ -26,7 +26,11 @@ const RotatingImages = () => {
 
   return (
     <div className="flex flex-col  items-center justify-center h-[80vh]">
-    <h2 className="Heading-style py-24">Trusted by these leading businesses</h2>
+      <div className="flex justify-center">
+        <h2 className="Heading-style py-24 ps-10 ms:ps-0">
+          Trusted by these leading businesses
+        </h2>
+      </div>
       <div className="relative w-full h-[300px] flex items-center justify-center overflow-hidden perspective-[1900px]">
         {/* <h2 className='Heading-style'>Trusted by these leading businesses</h2> */}
         <motion.div

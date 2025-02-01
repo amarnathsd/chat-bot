@@ -129,7 +129,7 @@ const Login = () => {
               </div>
               <button
                 type="submit"
-                className="w-full  md:w-10/12 p-2 bg-primary text-white text-lg font-semibold rounded mb-6"
+                className="w-full  md:w-10/12  p-2 bg-primary text-white text-lg font-semibold rounded mb-6"
               >
                 Login
               </button>

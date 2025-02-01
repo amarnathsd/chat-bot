@@ -54,24 +54,24 @@ const BotAddition = () => {
   return (
     <div>
       <Header Content={isLoggedIn} />
-      <div className="flex bg-gradient-to-b from-white to-primary/35 max-w-screen md:pt-20">
-        <div className="w-1/2">
+      <div className="flex flex-col md:flex-row bg-gradient-to-b from-white to-primary/35 max-w-screen md:pt-20">
+        <div className="w-full md:w-1/2">
           <ImageAnimationFromTop
             src="/images/chatbot-setup.webp"
             alt="Illustration"
             width={900}
             height={300}
-            className="w-full md:h-screen max-h-screen z-[-1]"
+            className="w-full h-screen min-h-screen z-[-1]"
           />
         </div>
-        <div className="w-1/2 flex flex-col items-center justify-start min-h-screen ">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-start min-h-screen ">
           {/* Topbar */}
           <div className="w-full bg-primary text-white text-center py-3">
             <p className="font-semibold text-lg">
               Chatbot not working as intended?{" "}
               <span
                 onClick={() => NavigateTo("feedback")}
-                className="text-secondary cursor-pointer border-b border-secondary"
+                className="text-blue-400 cursor-pointer underline"
               >
                 Share feedback
               </span>
@@ -83,7 +83,7 @@ const BotAddition = () => {
             {/* Test Chatbot Button */}
             <button
               onClick={handleTestChatbot}
-              className="w-64 p-3  hover:text-primary hover:bg-secondary text-secondary bg-primary text-lg font-semibold rounded-lg shadow-lgtransition-all duration-300"
+              className="w-64 p-3  hover:text-primary hover:bg-secondary text-secondary bg-primary text-md md:text-lg font-semibold rounded-lg shadow-lgtransition-all duration-300"
             >
               Test Chatbot
             </button>
@@ -91,7 +91,7 @@ const BotAddition = () => {
             {/* Integrate Chatbot Button */}
             <button
               onClick={handleIntegrateChatbot}
-              className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary text-lg font-semibold rounded-lg shadow-lg transition-all duration-300"
+              className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary text-md md:text-lg font-semibold rounded-lg shadow-lg transition-all duration-300"
             >
               Integrate on your Website
             </button>
@@ -124,7 +124,7 @@ const BotAddition = () => {
             {/* Test Integration Button */}
             <button
               onClick={handleTestIntegration}
-              className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary  text-lg font-semibold rounded-lg shadow-lg  transition-all duration-300"
+              className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary  text-md md:text-lg font-semibold rounded-lg shadow-lg  transition-all duration-300"
             >
               Test Integration
             </button>
@@ -134,23 +134,23 @@ const BotAddition = () => {
 
             {/* Success or Failure UI */}
             {success && !isLoading && (
-              <div className="mt-10 flex flex-col items-center max-w-screen">
+              <div className="mt-10 flex flex-col items-center max-w-screen ">
                 <Confetti
                   width={window.innerWidth}
                   height={window.innerHeight}
                 />
-                <h2 className="text-2xl font-semibold text-primary">
+                <h2 className="text-lg md:text-2xl font-semibold text-primary w-10/12 md:w-full ">
                   Success! Your chatbot has been successfully integrated.
                 </h2>
                 <button
-                  onClick={handleExploreAdminPanel}
-                  className="w-64 p-3 text-lg font-semibold rounded-lg shadow-lg hover:text-primary hover:bg-secondary text-secondary bg-primary transition-all duration-300 mt-4"
+                  onClick={() => NavigateTo("landing")}
+                  className="w-64 p-3 text-md md:text-lg font-semibold rounded-lg shadow-lg hover:text-primary hover:bg-secondary text-secondary bg-primary transition-all duration-300 mt-4"
                 >
                   Explore Admin Panel
                 </button>
                 <button
-                  onClick={handleStartTalking}
-                  className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 mt-4"
+                  onClick={() => NavigateTo("landing")}
+                  className="w-64 p-3 hover:text-primary hover:bg-secondary text-secondary bg-primary text-md md:text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 mt-4"
                 >
                   Start talking to your chatbot
                 </button>
