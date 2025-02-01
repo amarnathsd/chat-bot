@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { auth } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import BotAddition from "@/pages/BotAddition"; 
+import Feedback from "@/pages/Feedback"; // Make sure the correct path to Feedback page is used
 
 const Page = () => {
   const [user, setUser] = useState(null);
@@ -16,7 +16,7 @@ const Page = () => {
 
   return (
     <div>
-      {user ? <BotAddition /> : <p>Please log in to access this page.</p>}
+      {user ? <Feedback /> : <p>Please log in to access this page.</p>}
     </div>
   );
 };

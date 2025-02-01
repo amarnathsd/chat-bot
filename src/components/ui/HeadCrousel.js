@@ -40,7 +40,7 @@ const HeadCrousel = () => {
         style={{ transform: `translateX(-${activeSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="flex flex-col items-center min-w-full">
+          <div key={index} className="flex flex-col items-center justify-between min-w-full">
             <Image
               src={slide.image}
               alt="Illustration"
