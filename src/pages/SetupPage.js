@@ -78,7 +78,7 @@ const SetupPage = () => {
           alt="Illustration"
           width={900}
           height={300}
-          className="w-full md:h-screen"
+          className="w-full h-screen"
         />
       </div>
       <div className="flex z-10 flex-col md:flex-row min-h-screen h-full items-center justify-center 5">
@@ -96,7 +96,7 @@ const SetupPage = () => {
           {/* Company Setup Form */}
           <form
             onSubmit={handleSubmit}
-            className="w-full md:w-2/3 mx-auto transition-all duration-500 transform hover:scale-105"
+            className="w-10/12 md:w-2/3 mx-auto md:transition-all duration-500 transform hover:scale-105"
           >
             <div className="flex flex-col mb-4">
               <label className="text-primary font-bold pb-2">
@@ -111,7 +111,7 @@ const SetupPage = () => {
                 required
               />
             </div>
-            <div className="flex flex-col mb-4">
+            <div className="flex flex-col mb-4 ">
               <label className="text-primary font-bold pb-2">
                 Company Website*
               </label>
@@ -131,7 +131,7 @@ const SetupPage = () => {
             >
               AutoFetch Meta Description
             </button>
-            <div className="flex flex-col mb-6">
+            <div className="flex flex-col mb-6 pt-4">
               <label className="text-primary font-bold pb-2">
                 Company Description
               </label>
@@ -151,7 +151,7 @@ const SetupPage = () => {
           </form>
 
           <div className="flex justify-center border-t-2 mt-16 border-primary ">
-            <div className="w-8/12 transition-all duration-500 transform hover:scale-105 md:pb-28">
+            <div className="w-10/12 md:w-8/12 transition-all duration-500 transform hover:scale-105 md:pb-28">
               {isLoading || scrapedPages.length > 0 ? (
                 <div className="mt-10 ">
                   <button
@@ -188,9 +188,9 @@ const SetupPage = () => {
                         }`}
                         onClick={() => handlePageClick(page)}
                       >
-                        <p className="font-semibold text-primary">{page.url}</p>
+                        <p className="font-semibold text-primary max-w-10/12">{page.url}</p>
                         <div
-                          className={`text-sm font-semibold ${
+                          className={`text-sm font-semibold  ${
                             page.status === "scraped"
                               ? "text-green-600"
                               : page.status === "scraping"
@@ -212,7 +212,7 @@ const SetupPage = () => {
               {selectedPage && (
                 <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
                   <div className="bg-white p-6 rounded-lg w-4/5 max-w-3xl animate__animated animate__fadeIn">
-                    <h3 className="text-xl text-primary font-bold mb-4">
+                    <h3 className="text-xl text-primary font-bold mb-4 text-xs md:text-base">
                       Scraped Data from {selectedPage.url}
                     </h3>
                     <ul className="space-y-2">
