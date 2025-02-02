@@ -1,6 +1,6 @@
-Project Documentation
+# Project Documentation
 
-Authentication
+### Authentication
 
 The project is built using Next.js and Tailwind CSS, with Firebase handling authentication.
 
@@ -10,7 +10,7 @@ Google Authentication
 
 Email and Password Authentication (Includes email verification upon registration)
 
-Landing Page
+### Landing Page
 
 The main website initially had a strong commercial feel, which negatively impacted UX. To improve this:
 
@@ -22,11 +22,11 @@ Due to time constraints, more focus was given to UX and functionality, while UI 
 
 Framer Motion was used for smooth animations.
 
-Login
+### Login
 
 Users cannot access any setup pages without logging in.
 
-Setup Page
+### Setup Page
 
 Users need to input the following details:
 
@@ -40,7 +40,7 @@ On clicking Submit, a loader appears while the website data is scraped for chatb
 
 Once completed, it displays data based on the pages present on the website.
 
-Bot Addition Page
+### Bot Addition Page
 
 Test Chatbot Button: Navigates to another page where the chatbot can be tested.
 
@@ -54,7 +54,7 @@ Test Integration Button:
 
 Triggers confetti animation upon successful integration.
 
-Feedback Form
+### Feedback Form
 
 Users need to provide:
 
@@ -65,3 +65,7 @@ Rating
 Optional message (if any feedback needs to be shared)
 
 Email field is pre-filled for convenience.
+
+
+### Deplyed Site ###
+https://chat-bot-ohq5.vercel.app/
