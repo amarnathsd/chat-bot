@@ -156,7 +156,9 @@ const SetupPage = () => {
                 <div className="mt-10 ">
                   <button
                     onClick={navigateToIntegration}
-                    className={`${!isLoading? "md:mt-12": ""} w-full p-2 bg-primary text-white  text-lg font-semibold rounded-lg shadow-lg hover:bg-secondary hover:text-primary transition-all duration-300`}
+                    className={`${
+                      !isLoading ? "md:mt-12" : ""
+                    } w-full p-2 bg-primary text-white  text-lg font-semibold rounded-lg shadow-lg hover:bg-secondary hover:text-primary transition-all duration-300`}
                   >
                     Go to Integration
                   </button>
@@ -188,7 +190,9 @@ const SetupPage = () => {
                         }`}
                         onClick={() => handlePageClick(page)}
                       >
-                        <p className="font-semibold text-primary max-w-10/12">{page.url}</p>
+                        <p className="font-semibold text-primary max-w-10/12">
+                          {page.url}
+                        </p>
                         <div
                           className={`text-sm font-semibold  ${
                             page.status === "scraped"
@@ -209,43 +213,43 @@ const SetupPage = () => {
                   </div>
                 </div>
               )}
-              {selectedPage && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
-                  <div className="bg-white p-6 rounded-lg w-4/5 max-w-3xl animate__animated animate__fadeIn">
-                    <h3 className="text-xl text-primary font-bold mb-4 text-xs md:text-base">
-                      Scraped Data from {selectedPage.url}
-                    </h3>
-                    <ul className="space-y-2">
-                      {selectedPage.dataChunks.length ? (
-                        selectedPage.dataChunks.map((chunk, idx) => (
-                          <li
-                            key={idx}
-                            className="bg-primary text-white px-4 py-2 rounded-lg shadow-lg"
-                          >
-                            {chunk}
-                          </li>
-                        ))
-                      ) : (
-                        <li className="text-sm text-gray-500">
-                          No data chunks available yet.
-                        </li>
-                      )}
-                    </ul>
-                    <div className="mt-4 text-center">
-                      <button
-                        onClick={() => setSelectedPage(null)}
-                        className="p-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition-all duration-300"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </div>
+      {selectedPage && (
+        <div className="fixed bottom-0 left-0 w-[100vw] h-screen bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-4/5 max-w-3xl ">
+            <h3 className="text-xl text-primary font-bold mb-4 text-xs md:text-base">
+              Scraped Data from {selectedPage.url}
+            </h3>
+            <ul className="space-y-2">
+              {selectedPage.dataChunks.length ? (
+                selectedPage.dataChunks.map((chunk, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-primary text-white px-4 py-2 rounded-lg shadow-lg"
+                  >
+                    {chunk}
+                  </li>
+                ))
+              ) : (
+                <li className="text-sm text-gray-500">
+                  No data chunks available yet.
+                </li>
+              )}
+            </ul>
+            <div className="mt-4 text-center">
+              <button
+                onClick={() => setSelectedPage(null)}
+                className="p-2 bg-primary text-white font-semibold rounded-lg hover:bg-primary transition-all duration-300"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
