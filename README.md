@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Documentation
 
-## Getting Started
+Authentication
 
-First, run the development server:
+The project is built using Next.js and Tailwind CSS, with Firebase handling authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+It supports two authentication methods:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Google Authentication
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Email and Password Authentication (Includes email verification upon registration)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Landing Page
 
-## Learn More
+The main website initially had a strong commercial feel, which negatively impacted UX. To improve this:
 
-To learn more about Next.js, take a look at the following resources:
+Additional sections with animations were added to create a better user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+These modifications also enhance message delivery without making it seem overly sales-driven.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Due to time constraints, more focus was given to UX and functionality, while UI enhancements and image selection were not prioritized.
 
-## Deploy on Vercel
+Framer Motion was used for smooth animations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Login
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Users cannot access any setup pages without logging in.
+
+Setup Page
+
+Users need to input the following details:
+
+Company Name
+
+Company Website
+
+Meta Description (Auto-fetched from the website, but can also be manually entered)
+
+On clicking Submit, a loader appears while the website data is scraped for chatbot training.
+
+Once completed, it displays data based on the pages present on the website.
+
+Bot Addition Page
+
+Test Chatbot Button: Navigates to another page where the chatbot can be tested.
+
+Integration Button:
+
+Provides an option to email integration instructions to the developer.
+
+Alternatively, it can display instructions for chatbot integration.
+
+Test Integration Button:
+
+Triggers confetti animation upon successful integration.
+
+Feedback Form
+
+Users need to provide:
+
+Name
+
+Rating
+
+Optional message (if any feedback needs to be shared)
+
+Email field is pre-filled for convenience.
