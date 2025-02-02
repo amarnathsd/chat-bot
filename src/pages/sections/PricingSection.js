@@ -9,7 +9,6 @@ const packages = [
     id: 1,
     name: "Startup",
     price: 899,
-    // originalPrice: 599,
     benefits: [
       "50 chats in a month",
       "Basic dashboard (Chats management)",

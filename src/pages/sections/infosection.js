@@ -3,8 +3,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import CulinarySVG from "@/components/social-icons/CulinarySVG";
-// import YellowForkIcon from "@/components/social-icons/YellowForkIcon";
 import AnimatedParagraph from "@/components/ui/AnimatePara";
 
 const PortfolioSection = () => {
@@ -14,7 +12,6 @@ const PortfolioSection = () => {
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
 
-  // Dummy data
   const items = [
     {
       id: 1,
@@ -55,7 +52,6 @@ const PortfolioSection = () => {
 
   const totalSlides = items.slice(1, 4).length;
 
-  // Touch handlers for mobile carousel
   const handleTouchStart = (e) => {
     if (window.innerWidth < 768) {
       setTouchStartX(e.touches[0].clientX);
@@ -79,7 +75,6 @@ const PortfolioSection = () => {
     }
   };
 
-  // Carousel navigation
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };

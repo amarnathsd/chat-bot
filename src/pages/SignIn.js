@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
 import {
   signInWithPopup,
@@ -25,7 +24,6 @@ const Signup = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      // Create the user
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -33,7 +31,6 @@ const Signup = () => {
       );
       const user = userCredential.user;
 
-      // Send email verification
       await sendEmailVerification(user);
 
       alert("Sign-up successful! Please verify your email before logging in.");

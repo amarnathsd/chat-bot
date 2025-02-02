@@ -16,7 +16,6 @@ const FeedbackForm = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  // Fetch logged-in user's email
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {

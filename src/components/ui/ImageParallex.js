@@ -29,7 +29,7 @@ const ParallaxImage = ({ src, alt, className, OffsetMultipler=0.05, ScalePercent
         alt={alt}
         className="absolute bottom-[2.3rem] md:bottom-0 left-0 w-full h-full object-cover transition-transform duration-300 ease-out"
         style={{
-          transform: `translateY(${offsetY * OffsetMultipler}px) scale(${ScalePercent})`, // Adjust multiplier for effect
+          transform: `translateY(${offsetY * OffsetMultipler}px) scale(${ScalePercent})`, 
         }}
       />
     </div>

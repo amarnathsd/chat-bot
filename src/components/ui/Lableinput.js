@@ -1,4 +1,4 @@
-// components/LabelInput.js
+
 const LabelInput = ({ label, type, name, value, onChange, readOnly = false, className = '', ...props }) => {
     return (
       <div>

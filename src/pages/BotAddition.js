@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import Confetti from "react-confetti"; // To show the success confetti
-import Loader from "@/components/ui/Loader"; // Assuming you have a Loader component
-// import SocialShareButtons from "@/components/ui/SocialShareButtons"; // Create this component for social sharing
+import Confetti from "react-confetti"; 
+import Loader from "@/components/ui/Loader"; 
 import Image from "next/image";
 import Header from "@/components/ui/Header";
 import ImageAnimationFromTop from "@/components/ui/imagefromtop";
@@ -16,7 +15,7 @@ const BotAddition = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const handleTestChatbot = () => {
-    // Open a dummy website with chatbot integration
+  
     window.open("https://example.com", "_blank");
   };
 
@@ -25,16 +24,16 @@ const BotAddition = () => {
   };
 
   const handleMailInstructions = () => {
-    // Here, you can implement an email sending functionality (e.g., using an API to send the email to the developer).
+  
     alert("Mail instructions have been sent to your developer.");
   };
 
   const handleTestIntegration = () => {
     setIsLoading(true);
-    // Simulate a success/failure of the integration
+
     setTimeout(() => {
       setIsLoading(false);
-      const isSuccess = Math.random() > 0.5; // Simulate a random success/failure
+      const isSuccess = Math.random() > 0.5; 
       setSuccess(true);
     }, 3000);
   };

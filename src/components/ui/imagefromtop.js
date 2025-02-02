@@ -37,13 +37,13 @@ const ImageAnimationFromTop = ({ src, alt, width, height}) => {
         isInView ? "scale-y-100" : "scale-y-0"
       }`}
       style={{
-        transformOrigin: "top", // Ensures animation starts from the top
+        transformOrigin: "top",  
       }}
     >
       <Image
         src={src}
         alt={alt}
-        layout="responsive" // Ensures responsiveness
+        layout="responsive" 
         width={width}
         height={height}
       />

@@ -8,7 +8,6 @@ import {
 } from "firebase/auth";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db, auth } from "@/firebase";
-// import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import HeadCrousel from "@/components/ui/HeadCrousel";
 
@@ -57,20 +56,6 @@ const Login = () => {
     router.push("/signin");
   };
 
-  // const checkPaidUser = async (userEmail) => {
-  //   const paidUserCollection = collection(db, "paidUser");
-  //   const q = query(paidUserCollection, where("email", "==", userEmail));
-  //   const querySnapshot = await getDocs(q);
-
-  //   if (!querySnapshot.empty) {
-  //     router.push("/landing");
-  //   } else {
-  //     alert(
-  //       "You have successfully logged in."
-  //     );
-  //     router.push("/landing");
-  //   }
-  // };
 
   return (
     <div className="md:h-screen flex flex-col justify-between bg-gradient-to-b from-white to-primary/35">

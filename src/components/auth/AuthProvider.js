@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { auth } from "@/firebase"; // Adjust the path to your Firebase config
+import { auth } from "@/firebase"; 
 
 const withAuth = (Component) => {
   return (props) => {
@@ -11,11 +11,11 @@ const withAuth = (Component) => {
     useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
         if (!user) {
-          router.push("/login"); // Redirect to login page if not authenticated
+          router.push("/login"); 
         }
       });
 
-      return () => unsubscribe(); // Cleanup subscription
+      return () => unsubscribe(); 
     }, [router]);
 
     return <Component {...props} />;
